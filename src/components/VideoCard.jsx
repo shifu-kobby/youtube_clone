@@ -5,16 +5,16 @@ import { demoThumbnailUrl, demoVideoUrl, demoVideoTitle, demoChannelUrl, demoCha
 
 
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => (
-    <Card sx={{ width: { md: '320px', xs: '100%' } }}>
+    <Card sx={{ width: { md: '280px', xs: '100%' }, height: '280px', backgroundColor: '#000' }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
             <CardMedia
                 image={snippet?.thumbnails?.high?.url}
                 alt={snippet?.title}
-                sx={{ width: 358, height: 180 }}
+                sx={{ width: '100%', height: 160, borderRadius: '16px', objectFit: 'cover'}}
             />
         </Link>
         <CardContent
-            sx={{ backgroundColor: '#1e1e1e', height: '106px', boxShadow: 'none', borderRadius: 0 }}
+            sx={{ backgroundColor: '#000', height: '106px', boxShadow: 'none', borderRadius: 0 }}
         >
             <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
                 <Typography variant='subtitle1' fontWeight='bold' color='#FFF'>
