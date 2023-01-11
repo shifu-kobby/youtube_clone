@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
 import { Typography, Card, CardContent, CardMedia } from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
-import { demoThumbnailUrl, demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from '../utils/constants';
+import { demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from '../utils/constants';
 
 
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => (
-    <Card sx={{ width: { xs: '100%', sm: '260px', md: '280px' }, height: '280px', backgroundColor: '#000' }}>
+    <Card sx={{ width: { xs: '100%', sm: '260px', md: '280px' }, height: '280px', backgroundColor: '#000', border: '1px solid #fff', margin: '5px' }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
             <CardMedia
                 image={snippet?.thumbnails?.high?.url}
                 alt={snippet?.title}
-                sx={{ width: { xs: '100%', sm: '260px', md: '280px' }, height: 160, borderRadius: '16px', objectFit: 'cover' }}
+                sx={{ width: { xs: '100%', sm: '260px', md: '280px' }, height: 160, borderRadius: '16px' }}
             />
         </Link>
         <CardContent

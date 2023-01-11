@@ -29,7 +29,7 @@ const ChannelDetail = () => {
           zIndex: 10,
           height: '300px'
         }} />
-        <ChannelCard channelDetail={channelDetail} marginTop='-110px' />
+        <ChannelCard channelDetail={channelDetail} marginTop='-110px' margin='auto' />
       </Box>
       <Box display='flex' p='2'>
         <Box sx={{ mr: { sm: '100px' } }} />

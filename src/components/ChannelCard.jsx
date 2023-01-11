@@ -5,18 +5,19 @@ import { Link } from 'react-router-dom';
 import { demoProfilePicture } from '../utils/constants';
 import { height } from '@mui/system';
 
-const ChannelCard = ({ channelDetail, marginTop }) => (
+const ChannelCard = ({ channelDetail, marginTop, margin }) => (
 
   <Box
     sx={{
       boxShadow: 'none',
-      borderRadius: '20px',
+      // borderRadius: '20px',
+      border: '1px solid #fff',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      width: { xs: '356px', md: '320px' },
+      width: { xs: '100%', sm: '260px', md: '280px' },
       height: '280px',
-      margin: 'auto',
+      margin: margin,
       marginTop: marginTop
     }}
   >
