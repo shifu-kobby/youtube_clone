@@ -3,7 +3,6 @@ import { CheckCircle } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 import { demoProfilePicture } from '../utils/constants';
-import { height } from '@mui/system';
 
 const ChannelCard = ({ channelDetail, marginTop, margin }) => (
 
